@@ -1,4 +1,4 @@
 otsu_new
 ========
 
-rewrite
+rewrite. less stupid
