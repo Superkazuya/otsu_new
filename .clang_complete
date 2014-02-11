@@ -1,0 +1,3 @@
+-I/usr/include/opencv
+-DDEBUG
+-std=c++11
