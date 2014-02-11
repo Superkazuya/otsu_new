@@ -1,4 +1,6 @@
 otsu_new
 ========
 
-rewrite. less stupid
+rewrite. less stupid.
+
+otsu's method with arbitray modes

@@ -7,6 +7,8 @@ otsu::otsu(Mat _img, uchar _modes):
   calc_hist();
   calc_universalset();
   calc_record();
+  if(modes > universal_set.size())
+    modes = universal_set.size();
 
   counter = 0;
   generate_thres_index(0, modes, &otsu::print_vector);
@@ -73,8 +75,7 @@ float otsu::calc_intra(int begin, int end)
 }
 
 void otsu::generate_thres_index(int _offset, int _mode, otsu_memfn_ptr _callback)
-  //choose _mode-1 from [1,255]
-  //thats 255C(_mode-1)
+  //choose _mode-2 from universal_set.size()-1
 {
   assert(_mode >= 1);
   if(_mode == 1)
